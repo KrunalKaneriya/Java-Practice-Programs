@@ -1,0 +1,52 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+<left>
+    <ListView fx:id="passwordListListView">
+
+    </ListView>
+</left>
+    <center>
+            <VBox spacing="10">
+                <Label text="Website Name: "/>
+                <TextField fx:id="passwordFieldName"/>
+
+                <Label text = "Username: "/>
+                <TextField fx:id="passwordFieldUsername"/>
+
+                <Label text = "Password: "/>
+                <TextField fx:id="passwordFieldPassword"/>
+
+                <Label text="Website Address: "/>
+                <TextField fx:id="passwordFieldWebsite"/>
+
+
+                <padding>
+                    <Insets left = "20" top = "20" right="50"/>
+                </padding>
+            </VBox>
+
+    </center>
+    <top>
+        <MenuBar>
+            <Menu text="New  ">
+                <MenuItem text="Add.."/>
+                <SeparatorMenuItem/>
+                <MenuItem text="Exit" onAction="#handleExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+</BorderPane>

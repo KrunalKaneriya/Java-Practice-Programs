@@ -12,42 +12,21 @@
 <?import javafx.scene.control.CheckBox?>
 <?import java.lang.String?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
 <BorderPane fx:controller="sample.Controller"
             xmlns:fx="http://javafx.com/fxml">
 
-    <left>
-        <VBox>
-            <TreeView>
-
-                <TreeItem value="Case Full Name">
-                    <children>
-                        <TreeItem>
-                            <value>
-                                <CheckBox id="checkBox1" text="ONE" />
-                            </value>
-                        </TreeItem>
-                        <TreeItem value="Hello">
-                            <children>
-                                <TreeItem value = "Another TreeItem"/>
-                            </children>
-                        </TreeItem>
-                        <TreeItem>
-                            <value>
-                                <CheckBox id="checkBox2" text="TWO" />
-                            </value>
-                        </TreeItem>
-                        <TreeItem>
-                            <value>
-                                <CheckBox id="checkBox3" text="THREE" />
-                            </value>
-                        </TreeItem>
-                    </children>
-                </TreeItem>
-
-            </TreeView>
-
-        </VBox>
-    </left>
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem fx:id="openFile" text="Open File" onAction="#chooseFile"/>
+                <MenuItem fx:id="saveFile" text="Save File" onAction="#saveFile"/>
+                <MenuItem fx:id="quit" text="Quit" onAction="#quitWindow"/>
+            </Menu>
+        </MenuBar>
+    </top>
     <center>
         <VBox>
             <TextArea fx:id="notesTextArea" VBox.vgrow="ALWAYS">
